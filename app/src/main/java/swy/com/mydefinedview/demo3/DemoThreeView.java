@@ -90,7 +90,7 @@ public class DemoThreeView extends LinearLayout implements Animator.AnimatorList
         //初始化图片
         imgLike=new ImageView(getContext());
         //添加动画资源  获得帧动画
-        imgLike.setImageResource(R.drawable.animation_like);
+        imgLike.setBackgroundResource(R.drawable.animation_like);
         animLike= (AnimationDrawable) imgLike.getBackground();
         //初始化文本
         likeNumTv =new TextView(getContext());
@@ -104,7 +104,7 @@ public class DemoThreeView extends LinearLayout implements Animator.AnimatorList
         likeTextTv.setTextColor(defaultTextColor);
 
         imgDisLike =new ImageView(getContext());
-        imgDisLike.setImageResource(R.drawable.animation_dislike);
+        imgDisLike.setBackgroundResource(R.drawable.animation_dislike);
         animDisLike = (AnimationDrawable) imgDisLike.getBackground();
         disLikeNumTv =new TextView(getContext());
         disLikeNumTv.setTextColor(defaultTextColor);
@@ -183,7 +183,7 @@ public class DemoThreeView extends LinearLayout implements Animator.AnimatorList
             public void onClick(View v) {
                 faceType=0;//设置动画对象
                 animUp();
-                setTextVisibility(GONE);//滑动过程隐藏文字
+                setTextVisibility(VISIBLE);//滑动过程显示文字
                 //切换背景
                 setBackgroundColor(Color.parseColor(defaultShadow));
                 likeContent.setBackgroundResource(R.drawable.yellow_background);
@@ -199,7 +199,7 @@ public class DemoThreeView extends LinearLayout implements Animator.AnimatorList
             public void onClick(View v) {
                 faceType=1;
                 animUp();
-                setTextVisibility(GONE);
+                setTextVisibility(VISIBLE);
 
                 setBackgroundColor(Color.parseColor(defaultShadow));
                 likeContent.setBackgroundResource(R.drawable.white_background);
