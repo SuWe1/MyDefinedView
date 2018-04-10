@@ -6,4 +6,10 @@
         <attr name="textSize" format="dimension"/>
         <attr name="text" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="SingleChoiceThemeView">
+        <attr name="android:name" format="string"/>
+        <attr name="view_background" format="reference|color"/>
+        <attr name="choice" format="boolean"/>
+    </declare-styleable>
 </resources>
